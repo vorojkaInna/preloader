@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background:#000;
+}
+.preloader{
+    width:400px;
+    height:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#000;
+    filter: blur(10px) contrast(20);
+}
+.circle-1,.circle-2,.circle-3,.circle-4{
+    width:70px;
+    height:70px;
+    position:absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+.circle-2{
+    left:20%;
+    animation: anime 2s ease infinite;
+    background: yellow ;
+}
+.circle-1{
+    background: #4c49ff;
+    animation: anime-3 2s ease infinite;
+}
+.circle-3{
+    left: 80%;
+        animation: anime-2 2s ease infinite;
+     background: red;
+}
+@keyframes anime {
+    0% {
+        left: 20%;
+    }
+    25% {
+        left: 50%;
+        background: yellow;
+    }
+    26% {
+        background: red;
+    }
+    50% {
+        left: 20%;
+    }
+    75% {
+        left: 50%;
+        background: red;
+    }
+    76% {
+        background: yellow;
+    }
+    100% {
+        left: 20%
+    }
+}
+@keyframes anime-2 {
+    0% {
+        left: 80%;
+    }
+    25% {
+        left: 50%;
+        background: red;
+    }
+    26% {
+        background: yellow;
+    }
+    50% {
+        left: 80%;
+    }
+    75% {
+        left: 50%;
+        background: yellow;
+    }
+    76% {
+        background: red;
+    }
+    100% {
+        left: 80%
+    }
+}
+@keyframes anime-3 {
+    0% {
+        visibility: visible;
+    }
+    25% {
+        visibility: hidden;
+    }
+    26% {
+        visibility: visible;
+    }
+    50% {
+        visibility: visible;
+    }
+    75% {
+        visibility: hidden;
+    }
+    76% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
+}
